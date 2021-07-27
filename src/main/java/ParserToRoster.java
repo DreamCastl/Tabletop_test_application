@@ -16,6 +16,10 @@ public class ParserToRoster {
         Roster.RP = Get_RP(doc);
         Roster.HTMlView = doc.html();
 
+
+        Unit First = new Unit("First unit");
+        Roster.Units.add(First);
+
     }
 
     private static int Get_PowerLevel(Document doc) {
@@ -25,6 +29,7 @@ public class ParserToRoster {
             PowerLevel = StringToParse.substring(StringToParse.lastIndexOf("[") + 1, StringToParse.lastIndexOf("PL") - 1);
             Element div = doc.select("li").first();
             div.append("<PowerLevel>" + PowerLevel + "</PowerLevel>");
+
         }
 
 
