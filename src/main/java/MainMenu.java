@@ -30,10 +30,8 @@ public class MainMenu {
 
             this.RosterList.add(CurrentRoster);
 
-            System.out.println(CurrentRoster.NameRoster);
-            System.out.println(CurrentRoster.Faction);
-            System.out.println(CurrentRoster.PowerLevel);
-            System.out.println(CurrentRoster.RP);
+            SaveToFile saveToFile = new SaveToFile();
+            saveToFile.SaveRosterToFile(CurrentRoster);
 
         }
 }
