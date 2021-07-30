@@ -10,14 +10,15 @@ public class ParserToRoster {
     {
         Document doc = Jsoup.parse(html);
 
+        //TODO Геты пишут в конец + отстствует стиль!!!!
         Roster.NameRoster = Get_Roster_name(doc);
         Roster.Faction = Get_Faction(doc);
         Roster.PowerLevel = Get_PowerLevel(doc);
         Roster.RP = Get_RP(doc);
         Roster.HTMlView = doc.html();
 
-
-        Unit First = new Unit("First unit");
+        //TODO основной парсер юнитов, разбить по ролям?...
+        Unit First = new Unit("First unit");  //тестовый
         Roster.Units.add(First);
 
     }

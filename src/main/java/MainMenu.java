@@ -17,8 +17,9 @@ public class MainMenu {
     AddNewRoster();
 
 
-        return null;
+        return null; //возвращаем для дебага
     }
+
 
     public void AddNewRoster()
         {
