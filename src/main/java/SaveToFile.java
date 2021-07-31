@@ -6,7 +6,9 @@ public class SaveToFile {
 
     public  void SaveRosterToFile(Roster Roster)
     {
-        String text = Roster.HTMlView; // строка для записи
+
+
+        String text = Roster.CreateHTMLView(); // строка для записи
         try(FileOutputStream fos=new FileOutputStream("D://TableTop_App//src//main//resources//EditedRoster.html"))
         {
             // перевод строки в байты

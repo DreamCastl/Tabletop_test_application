@@ -15,7 +15,7 @@ public class ParserToRoster {
         Roster.Faction = Get_Faction(doc);
         Roster.PowerLevel = Get_PowerLevel(doc);
         Roster.RP = Get_RP(doc);
-        Roster.HTMlView = doc.html();
+
 
         //TODO основной парсер юнитов, разбить по ролям?...
         Unit First = new Unit("First unit");  //тестовый
@@ -28,9 +28,6 @@ public class ParserToRoster {
         if (PowerLevel.equals("")) {
             String StringToParse = doc.body().getElementsByTag("h2").text();
             PowerLevel = StringToParse.substring(StringToParse.lastIndexOf("[") + 1, StringToParse.lastIndexOf("PL") - 1);
-            Element div = doc.select("li").first();
-            div.append("<PowerLevel>" + PowerLevel + "</PowerLevel>");
-
         }
 
 
@@ -41,10 +38,7 @@ public class ParserToRoster {
         String RP = doc.body().getElementsByTag("REQUISITIONPOINTS").text();
         if (RP.equals("")) {
             RP = "5";
-            Element div = doc.select("li").first();
-            div.append("<REQUISITIONPOINTS>" + RP + "</REQUISITIONPOINTS>");
         }
-
         return Integer.parseInt(RP);
     }
 
@@ -53,8 +47,6 @@ public class ParserToRoster {
         if (Faction.equals("")) {
             String StringToParse = doc.body().getElementsByTag("h2").text();
             Faction = StringToParse.substring(StringToParse.lastIndexOf("(") + 1, StringToParse.lastIndexOf(")"));
-            Element div = doc.select("li").first();
-            div.append("<Faction>" + Faction + "</Faction>");
         }
 
         return Faction;
