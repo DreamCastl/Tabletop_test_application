@@ -3,7 +3,7 @@ package HTMLClasses;
 import org.jsoup.nodes.Document;
 
 public class HTMLObject {
-    public String  Name = "";
+    public String Name = "";
     public String Style = "";
     public String Tag = "";
 
