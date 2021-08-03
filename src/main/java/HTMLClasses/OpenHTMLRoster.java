@@ -1,3 +1,5 @@
+package HTMLClasses;
+
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -29,7 +31,7 @@ public class OpenHTMLRoster {
 
     //TODO возвращает путь к файлу указанный пользователем
     private static String OpenFile() {
-        return "D:/Roster.html";
+        return "D://TableTop_App//src//main//resources//Roster.html";
     }
 
 }
