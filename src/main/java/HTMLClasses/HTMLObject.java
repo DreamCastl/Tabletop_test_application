@@ -11,7 +11,7 @@ public class HTMLObject {
     // doc - сам документ в который добавляем
     // родительский тег
     // объект печати - дочерний от HTMLObject - как указать правельно сигнатуру?
-    private void AddToHTML(Document doc, String ParentsTag) {
+    private void AddToBody(Document doc, String ParentsTag) {
 
     }
 
